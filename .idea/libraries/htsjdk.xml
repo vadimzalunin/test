@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="htsjdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/apache-ant-1.8.2-bzip2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-compress-1.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-jexl-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/htsjdk-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/ngs-java-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/snappy-java-1.0.3-rc3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/xz-1.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../htsjdk/src/java" />
+      <root url="file://$PROJECT_DIR$/../htsjdk/src/tests/java" />
+    </SOURCES>
+  </library>
+</component>

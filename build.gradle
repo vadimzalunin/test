@@ -1,0 +1,61 @@
+group 'ga4gh.rapi'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: "com.google.protobuf"
+apply plugin:'application'
+mainClassName = "com.sampullara.jaxrsprotobuf.tutorial.Main"
+
+sourceCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.7.0'
+    }
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile 'com.google.protobuf:protobuf-java:3.0.0-beta-1'
+    compile 'org.glassfish.grizzly:grizzly-framework:2.3.22'
+    compile 'javax.ws.rs:jsr311-api:1.1.1'
+//    compile 'com.github.samtools:htsjdk:1.129'
+    compile 'htsjdk-2.0.1.jar'
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+
+protobuf {
+    // Configure the protoc executable
+    protoc {
+        // Download from repositories
+        artifact = 'com.google.protobuf:protoc:3.0.0-alpha-3'
+    }
+
+    generateProtoTasks.generatedFilesBaseDir = 'generated-sources'
+
+    generateProtoTasks {
+        // all() returns the collection of all protoc tasks
+        all().each { task ->
+            // Here you can configure the task
+        }
+
+        // In addition to all(), you may get the task collection by various
+        // criteria:
+
+        // (Java only) returns tasks for a sourceSet
+        ofSourceSet('main')
+
+    }
+}
