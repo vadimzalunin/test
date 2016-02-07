@@ -22,6 +22,7 @@ public class BoundedInputStream extends InputStream {
     public static class Builder {
         List<Zone> zones = new ArrayList<>();
         public Builder add(long offset, long size) {
+            System.out.printf("adding: %d+%d\n", offset, size);
             zones.add(new Zone(offset, size));
             return this;
         }
