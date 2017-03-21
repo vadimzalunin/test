@@ -17,8 +17,6 @@ public class TestBook {
 
         System.out.println(sum);
 
-//           System.out.println((i+1) + ": Hello!");
-
 
 
 //        AddressBookProtos.Person.PhoneNumber phoneNumber = AddressBookProtos.Person.PhoneNumber.newBuilder().setNumber("123").build();
